@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href=" {{ asset('css/app.css') }} ">
     <title>Home</title>
 </head>
 <body>
 
-    <div>
-        @forelse ($movies as $key => $movie)
+    <div class="container">
 
-            <h5 class="card-title">{{ $movie->title}}</h5>
-            <p class="card-text">{{$movie->description}}</p>
+        @yield('content')
 
-        @empty
+    </main>
 
-        @endforelse
-    </div>
 
+    <script src=" {{ asset('js/app.js') }} "></script>
 </body>
 </html>
